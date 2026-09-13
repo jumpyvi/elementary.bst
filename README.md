@@ -16,7 +16,7 @@ It can be compared most accurately to [Gnome OS](https://os.gnome.org), which is
 - [ ] Granite 9
 - [x] Gala
 - [x] Wingpanel
-  - [ ] app-menu
+  - [x] apps-menu
   - [ ] panel-bluethooth
   - [ ] panel-datetime
   - [ ] panel-network
@@ -27,7 +27,7 @@ It can be compared most accurately to [Gnome OS](https://os.gnome.org), which is
   - [x] quick-settings
 - [ ] AppCenter
 - [x] Dock
-- [ ] Settings
+- [ ] Settings (switchboard)
   - [x] Settings-daemon
   - [x] Portals
 - [x] EOS Greeter
@@ -39,7 +39,7 @@ It can be compared most accurately to [Gnome OS](https://os.gnome.org), which is
   - [ ] Browser
   - [ ] Code
 
-(And much more)
+(And probably much more)
 
 
 # Thank you
