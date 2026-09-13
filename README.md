@@ -34,7 +34,7 @@ It can be compared most accurately to [Gnome OS](https://os.gnome.org), which is
 - [X] LightDM
 - [ ] Kernel
 - [ ] Apps
-  - [ ] Terminal
+  - [x] Terminal
   - [x] Files
   - [ ] Browser
   - [ ] Code
