@@ -1,5 +1,3 @@
-# Base os-release element that is used for DKMS modules and the initramfs.
-# This is to prevent unnecessary rebuilds of elements such as `oci/zirconium/filesystem.bst`. The initramfs does not need IMAGE_VERSION information, and neither does any DKMS module.
 kind: manual
 
 sources:
@@ -13,12 +11,12 @@ variables:
   strip-binaries: ""
 
 environment:
-  NAME: "Zirconium Hawaii"
-  CODENAME: "Hawaii"
-  HOME_URL: "https://zirconium.gay"
-  DOCUMENTATION_URL: "https://github.com/zirconium-dev/zirconium-hawaii"
-  SUPPORT_URL: "https://github.com/zirconium-dev/zirconium-hawaii/issues"
-  ID: "zirconium"
+  NAME: "elementaryOS (fSDK)"
+  CODENAME: "X"
+  HOME_URL: "http://localhost"
+  DOCUMENTATION_URL: "http://localhost"
+  SUPPORT_URL: "http://localhost"
+  ID: "elementary"
   VERSION: "%{freedesktop-sdk-flatpak-branch}"
 
 config:
@@ -34,13 +32,12 @@ config:
       ID="${ID}"
       ID_LIKE="org.freedesktop.platform"
       VERSION_CODENAME="${CODENAME}"
-      CPE_NAME="cpe:/o:zirconium-dev:zirconium-hawaii"
       HOME_URL="${HOME_URL}"
       SUPPORT_URL="${SUPPORT_URL}"
       BUG_REPORT_URL="${SUPPORT_URL}"
       DOCUMENTATION_URL="${DOCUMENTATION_URL}"
-      LOGO="zirconium"
-      DEFAULT_HOSTNAME="zirconium"
+      LOGO="logo"
+      DEFAULT_HOSTNAME="fSDK"
       EOF
       mkdir -p %{install-root}%{sysconfdir}/
       ln -sf ../usr/lib/os-release %{install-root}%{sysconfdir}/os-release

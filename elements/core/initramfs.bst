@@ -2,7 +2,7 @@ kind: script
 
 build-depends:
   - freedesktop-sdk.bst:components/fakecap.bst
-  - stacks/zirconium.bst
+  - stacks/elementary.bst
   - freedesktop-sdk.bst:vm/prepare-image.bst
   - core/os-release.bst
   - core/linux-fedora.bst

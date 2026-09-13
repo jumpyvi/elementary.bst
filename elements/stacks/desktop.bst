@@ -1,20 +1,6 @@
 kind: stack
 
 depends:
-  - desktop/niri.bst
-  - desktop/quickshell.bst
-  - desktop/dankmaterialshell.bst
-  - desktop/foot.bst
-  - desktop/satty.bst
-  - desktop/brlaser.bst
-  - cli/chezmoi.bst
-  - core/greetd.bst
-  - core/pam-u2f.bst
-  - core/xdg-utils.bst
-  - desktop/iio-niri.bst
-  - desktop/xdg-terminal-exec.bst
-  - config/satty.bst
-  - config/default-icons/adwaita.bst
   - config/ld-config.bst
   - freedesktop-sdk.bst:components/desktop-file-utils.bst
   - freedesktop-sdk.bst:components/xwayland.bst

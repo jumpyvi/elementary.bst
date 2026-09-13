@@ -1,11 +1,7 @@
 default:
     @just --list
 
-image_name := env("BUILD_IMAGE_NAME", "zirconium-hawaii")
-image_tag := env("BUILD_IMAGE_TAG", "latest")
 base_dir := env("BUILD_BASE_DIR", ".")
-filesystem := env("BUILD_FILESYSTEM", "btrfs")
-vendor := "Zirconium"
 bst_image := env("BST_IMAGE", "registry.gitlab.com/freedesktop-sdk/infrastructure/freedesktop-sdk-docker-images/bst2:188e1f83de7a9cc5c4c2d779942a45b0ec3f093f")
 
 bst *ARGS:
@@ -13,7 +9,7 @@ bst *ARGS:
     set -xeuo pipefail
 
     mkdir -p "$HOME/.cache/buildstream"
-    mkdir -p "$HOME/.config/hawaii"
+    mkdir -p "$HOME/.config/elementarybst"
     touch "$HOME/.config/buildstream.conf"
     podman run --rm \
         --privileged \
@@ -21,7 +17,6 @@ bst *ARGS:
         --network=host \
         -v "{{base_dir}}":/pwd \
         -v "$HOME/.config/buildstream.conf:/root/.config/buildstream.conf" \
-        -v "$HOME/.config/hawaii:/root/.config/hawaii" \
         -v "$HOME/.cache/buildstream:/root/.cache/buildstream:rw" \
         -w /pwd \
         "{{bst_image}}" bash -c 'bst --colors {{ARGS}}'
@@ -31,7 +26,6 @@ bst-interactive *ARGS:
     set -xeuo pipefail
 
     mkdir -p "$HOME/.cache/buildstream"
-    mkdir -p "$HOME/.config/hawaii"
     touch "$HOME/.config/buildstream.conf"
     podman run --rm -it \
         --privileged \
@@ -39,23 +33,9 @@ bst-interactive *ARGS:
         --network=host \
         -v "{{base_dir}}":/pwd \
         -v "$HOME/.config/buildstream.conf:/root/.config/buildstream.conf" \
-        -v "$HOME/.config/hawaii:/root/.config/hawaii" \
         -v "$HOME/.cache/buildstream:/root/.cache/buildstream:rw" \
         -w /pwd \
         "{{bst_image}}" bash -c 'bst --colors {{ARGS}}'
-
-generate-keys $vendor=vendor:
-    #!/usr/bin/env bash
-    set -xeu
-    for f in extra-db extra-kek modules; do
-        [ ! -d "{{base_dir}}/files/boot-keys/${f}" ] && mkdir -p "{{base_dir}}/files/boot-keys/${f}"
-    done
-
-    for f in PK KEK DB VENDOR SYSEXT linux-module-cert; do
-        [ ! -f "{{base_dir}}/files/boot-keys/${f}.key" ] && [ ! -f "{{base_dir}}/files/boot-keys/${f}.crt" ] && \
-            openssl req -new -x509 -newkey rsa:2048 -subj "/CN=${vendor} ${f} key/" -keyout "files/boot-keys/${f}.key" -out "files/boot-keys/${f}.crt" -days 3650 -nodes -sha256
-    done
-    cp files/boot-keys/linux-module-cert.crt files/boot-keys/modules/linux-module-cert.crt
 
 [ arg ("branch", long="branch", short="b") ]
 generate-image-version branch="25.08":
@@ -74,34 +54,3 @@ generate-image-version branch="25.08":
     commit: '${COMMIT}'
     image-version: '%{branch}.${IMAGE_VERSION}'
     EOF
-
-checkout-container $element="oci/zirconium/image.bst" $file="oci.tar":
-    #!/usr/bin/env bash
-    set -x
-    just bst artifact checkout --tar ${file} ${element}
-
-build-containerfile $image_name=image_name $image_tag=image_tag:
-    podman build --squash-all -t "${image_name}:${image_tag}" .
-
-bootc *ARGS:
-    podman run \
-        --rm --privileged --pid=host \
-        -it \
-        -v /var/lib/containers:/var/lib/containers \
-        -v /dev:/dev \
-        -e RUST_LOG=debug \
-        -v "{{base_dir}}:/data" \
-        --security-opt label=type:unconfined_t \
-        "{{image_name}}:{{image_tag}}" bootc {{ARGS}}
-
-generate-bootable-image $base_dir=base_dir $filesystem=filesystem:
-    #!/usr/bin/env bash
-    if [ ! -e "${base_dir}/bootable.raw" ] ; then
-        fallocate -l 30G "${base_dir}/bootable.raw"
-    fi
-
-    just bootc install to-disk --composefs-backend \
-        --via-loopback /data/bootable.raw \
-        --filesystem "${filesystem}" \
-        --wipe \
-        --bootloader systemd \

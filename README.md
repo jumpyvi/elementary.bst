@@ -30,7 +30,7 @@ It can be compared most accurately to [Gnome OS](https://os.gnome.org), which is
 - [ ] Settings
   - [x] Settings-daemon
   - [x] Portals
-- [ ] EOS Greeter
+- [x] EOS Greeter
 - [X] LightDM
 - [ ] Kernel
 - [ ] Apps
