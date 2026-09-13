@@ -35,7 +35,7 @@ It can be compared most accurately to [Gnome OS](https://os.gnome.org), which is
 - [ ] Kernel
 - [ ] Apps
   - [ ] Terminal
-  - [ ] Files
+  - [x] Files
   - [ ] Browser
   - [ ] Code
 
