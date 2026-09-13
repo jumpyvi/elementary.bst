@@ -29,11 +29,15 @@ It can be compared most accurately to [Gnome OS](https://os.gnome.org), which is
 - [x] Dock
 - [ ] Settings
   - [x] Settings-daemon
-- [ ] Files
-- [ ] Code
+  - [x] Portals
 - [ ] EOS Greeter
 - [X] LightDM
 - [ ] Kernel
+- [ ] Apps
+  - [ ] Terminal
+  - [ ] Files
+  - [ ] Browser
+  - [ ] Code
 
 (And much more)
 
