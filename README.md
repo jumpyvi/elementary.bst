@@ -1,4 +1,4 @@
-# ElementaryOS 28.04 (fSDK)
+# ElementaryOS 26.04 (fSDK)
 
 ElementaryOS, but based on [Freedesktop SDK](https://gitlab.com/freedesktop-sdk/freedesktop-sdk) instead of Ubuntu and PackageSlop.
 
@@ -15,14 +15,24 @@ It can be compared most accurately to [Gnome OS](https://os.gnome.org), which is
 - [x] Granite 7
 - [ ] Granite 9
 - [x] Gala
-- [ ] Wingpanel
+- [x] Wingpanel
+  - [ ] app-menu
+  - [ ] panel-bluethooth
+  - [ ] panel-datetime
+  - [ ] panel-network
+  - [ ] panel-nightlight
+  - [ ] panel-notifications
+  - [x] panel-power
+  - [x] panel-sound
+  - [x] quick-settings
 - [ ] AppCenter
-- [ ] Wingpanel
+- [x] Dock
 - [ ] Settings
 - [ ] Files
 - [ ] Code
-- [ ] Greeter
-- [ ] LightDM
+- [ ] EOS Greeter
+- [X] LightDM
+- [ ] Kernel
 
 (And much more)
 
