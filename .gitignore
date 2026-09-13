@@ -11,6 +11,8 @@ cosign.key
 *.raw
 *.tar
 
+rootfs/
+
 files/boot-keys/DB.crt
 files/boot-keys/DB.key
 files/boot-keys/KEK.crt

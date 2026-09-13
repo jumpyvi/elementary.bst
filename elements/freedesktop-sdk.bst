@@ -58,7 +58,3 @@ config:
     components/systemd.bst: gnome-build-meta.bst:core-deps/systemd.bst
     components/systemd-ukify.bst: gnome-build-meta.bst:core-deps/systemd-ukify.bst
     components/systemd-libs.bst: gnome-build-meta.bst:core-deps/systemd-libs.bst
-
-    components/geoclue-base.bst: gnome-build-meta.bst:gnomeos-deps/geoclue-base.bst
-
-    components/bash-config.bst: config/bash-config.bst

@@ -19,7 +19,7 @@ depends:
   - freedesktop-sdk.bst:components/iputils.bst
   - freedesktop-sdk.bst:components/openssh.bst
   - freedesktop-sdk.bst:components/openssh-systemd.bst
-  - freedesktop-sdk.bst:components/fwupd.bst
+  - gnome-build-meta.bst:core-deps/fwupd.bst
   - freedesktop-sdk.bst:vm/base-filesystem.bst
   - freedesktop-sdk.bst:vm/config/networkd.bst
   - freedesktop-sdk.bst:vm/config/resolved.bst
@@ -28,7 +28,6 @@ depends:
   - freedesktop-sdk.bst:components/wpa-supplicant.bst
   - freedesktop-sdk.bst:components/usbutils.bst
   - freedesktop-sdk.bst:components/hosts.bst
-  - freedesktop-sdk.bst:components/bash-config.bst
   - freedesktop-sdk.bst:components/bash-completion.bst
   - freedesktop-sdk.bst:components/findutils.bst
   - freedesktop-sdk.bst:components/diffutils.bst
@@ -60,7 +59,6 @@ depends:
   - freedesktop-sdk.bst:components/unzip.bst
   - freedesktop-sdk.bst:components/rsync.bst
   - freedesktop-sdk.bst:components/jq.bst
-  - freedesktop-sdk-extra.bst:components/smartmontools.bst
 
   - gnome-build-meta.bst:gnomeos-deps/android-udev-rules.bst
   - gnome-build-meta.bst:gnomeos-deps/distrobox.bst
@@ -68,10 +66,6 @@ depends:
   - gnome-build-meta.bst:gnomeos-deps/journald-config.bst
   - gnome-build-meta.bst:gnomeos-deps/just.bst
   - gnome-build-meta.bst:gnomeos-deps/ld-config.bst
-  - gnome-build-meta.bst:gnomeos-deps/toolbox.bst
   - gnome-build-meta.bst:gnomeos-deps/udev-hide-usr.bst
   - gnome-build-meta.bst:gnomeos-deps/zram-generator.bst
   - gnome-build-meta.bst:gnomeos/reload-sysext.bst
-
-  - cli/lsb-release.bst
-  - config/polkit/networkmanager-wheel-nopasswd.bst

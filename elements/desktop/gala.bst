@@ -24,6 +24,6 @@ depends:
 - gnome-build-meta.bst:sdk/libgee.bst
 - gnome-build-meta.bst:core/gnome-desktop.bst
 - gnome-build-meta.bst:core/mutter.bst
-- deps/libhandy.bst
+- gnome-build-meta.bst:sdk/libhandy.bst
 - deps/granite-7.bst
 - deps/granite.bst

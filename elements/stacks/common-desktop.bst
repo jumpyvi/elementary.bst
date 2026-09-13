@@ -12,15 +12,9 @@ depends:
   - gnome-build-meta.bst:gnomeos-deps/alsa-ucm-conf.bst
   - gnome-build-meta.bst:gnomeos-deps/wl-clipboard.bst
   - gnome-build-meta.bst:gnomeos-deps/fprintd.bst
-  - desktop/xwayland-satellite.bst
-  - gnome-build-meta.bst:core-deps/speech-dispatcher.bst
-  - gnome-build-meta.bst:core-deps/xdg-desktop-portal-gnome.bst
   - gnome-build-meta.bst:core-deps/xdg-desktop-portal-gtk.bst
-  - gnome-build-meta.bst:core-deps/boltd.bst
   - gnome-build-meta.bst:core/gnome-disk-utility.bst
   - gnome-build-meta.bst:core/gnome-keyring.bst
-  - gnome-build-meta.bst:core/nautilus.bst
-  - desktop/xdg-terminal-exec-nautilus.bst
   - gnome-build-meta.bst:core/gvfs-daemon.bst
   - gnome-build-meta.bst:sdk/gvfs-client.bst
   - gnome-build-meta.bst:sdk/pinentry.bst
@@ -32,10 +26,6 @@ depends:
   - gnome-build-meta.bst:gnomeos-deps/noto-cjk.bst
   - gnome-build-meta.bst:sdk/cantarell-fonts.bst
   - gnome-build-meta.bst:sdk/adwaita-fonts.bst
-  - desktop/fonts/jetbrains-mono.bst
-  - desktop/fonts/jetbrains-mono-nerd-font.bst
-  - desktop/fonts/maple-mono.bst
-  - desktop/fonts/noto-fonts.bst
 
   - freedesktop-sdk.bst:components/vulkan-icd-loader.bst
   - freedesktop-sdk.bst:components/compat-vulkan-link.bst

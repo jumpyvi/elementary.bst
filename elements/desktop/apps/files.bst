@@ -27,6 +27,6 @@ depends:
 - gnome-build-meta.bst:core-deps/libcloudproviders.bst
 - freedesktop-sdk.bst:components/poppler.bst
 - freedesktop-sdk.bst:components/desktop-file-utils.bst
-- deps/libhandy.bst
+- gnome-build-meta.bst:sdk/libhandy.bst
 - deps/granite-7.bst
 - deps/granite.bst

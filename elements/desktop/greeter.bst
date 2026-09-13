@@ -25,6 +25,6 @@ depends:
 - gnome-build-meta.bst:sdk/gdk-pixbuf.bst
 - gnome-build-meta.bst:core/gnome-settings-daemon.bst
 - desktop/lightdm.bst
-- deps/libhandy.bst
+- gnome-build-meta.bst:sdk/libhandy.bst
 - deps/granite-7.bst
 - deps/granite.bst

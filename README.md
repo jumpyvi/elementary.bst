@@ -9,6 +9,25 @@ This is a distribution that builds its own components in a manner that is both f
 
 It can be compared most accurately to [Gnome OS](https://os.gnome.org), which is our biggest inspiration for this project. We use the same build system as Gnome OS, and we even use components **from** Gnome OS!
 
+
+## How to?
+
+### Build a single element
+
+For exemple, to build `gala`
+
+`just bst build desktop/gala.bst`
+
+or `switchboard`
+
+`just bst build desktop/settings/switchboard.bst`
+
+### Build elementaryOS (meta)
+
+`just bst build stacks/elementaryos.bst`
+
+`just bst artifact checkout stacks/elementaryos.bst --directory ./rootfs`
+
 ## Progress
 
 - [x] Granite (Legacy)

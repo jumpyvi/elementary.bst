@@ -20,7 +20,7 @@ depends:
 - gnome-build-meta.bst:core/gnome-desktop.bst
 - gnome-build-meta.bst:core-deps/fwupd.bst
 - freedesktop-sdk.bst:components/gdk-pixbuf.bst
-- gnome-build-meta.bst:gnomeos-deps/geoclue-base.bst
+- freedesktop-sdk.bst:components/geoclue-libs.bst
 - gnome-build-meta.bst:core-deps/accountsservice.bst
 - freedesktop-sdk.bst:components/dbus.bst
 - deps/granite-7.bst

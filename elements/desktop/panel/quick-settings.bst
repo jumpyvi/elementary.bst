@@ -4,7 +4,7 @@ sources:
 - kind: git_repo
   url: github:elementary/quick-settings
   track: main
-  ref: 8.0.4-40-g548769ab40b4e7229656eb50780dcb9bd576a6d4
+  ref: 1.4.0-21-g425729a4fdc5ec80b355e14c1095a5a004240180
 
 build-depends:
 - freedesktop-sdk.bst:public-stacks/buildsystem-meson.bst
@@ -14,6 +14,8 @@ build-depends:
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- deps/packagekit-glib2.bst
+- gnome-build-meta.bst:core-deps/libportal.bst
 - freedesktop-sdk.bst:components/gsettings-desktop-schemas.bst
 - gnome-build-meta.bst:sdk/gtk.bst
 - gnome-build-meta.bst:sdk/libadwaita.bst
