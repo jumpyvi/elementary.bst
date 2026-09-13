@@ -28,6 +28,7 @@ It can be compared most accurately to [Gnome OS](https://os.gnome.org), which is
 - [ ] AppCenter
 - [x] Dock
 - [ ] Settings
+  - [x] Settings-daemon
 - [ ] Files
 - [ ] Code
 - [ ] EOS Greeter
