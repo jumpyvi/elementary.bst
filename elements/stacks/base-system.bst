@@ -77,4 +77,3 @@ depends:
   - config/polkit/networkmanager-wheel-nopasswd.bst
   - config/sysctl.bst
   - config/systemd/zirconium.bst
-  - core/tuned.bst
