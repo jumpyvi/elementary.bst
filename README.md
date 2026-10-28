@@ -40,10 +40,10 @@ or `switchboard`
 - [x] Notifications
 - [x] Wingpanel
   - [x] apps-menu
-  - [ ] panel-bluetooth
+  - [x] panel-bluetooth
   - [x] panel-datetime
   - [x] panel-network
-  - [ ] panel-nightlight
+  - [x] panel-nightlight
   - [x] panel-notifications
   - [x] panel-power
   - [x] panel-sound
@@ -58,17 +58,28 @@ or `switchboard`
   - [x] network
   - [x] notifications
   - [x] sound
+  - [ ] sharing
+  - [ ] power
+  - [ ] display
+  - [ ] keyboard
+  - [ ] useraccounts
+  - [ ] onlineaccounts
+  - [ ] printers
+  - [ ] locale
+  - [ ] bluetooth
 - [x] Portals
 - [x] EOS Greeter
 - [X] LightDM
-- [x] Kernel
-- [ ] PolkitAgent
-- [ ] Onboarding
+- [ ] APTShim
+- [X] Kernel (basic fsdk kernel for now)
+- [x] PolkitAgent
+- [ ] Sideload
+- [x] Onboarding
 - [ ] Shortcut Overlay
 - [ ] Apps
   - [x] Terminal
   - [x] Files
-  - [ ] Code
+  - [ ] Code (missing deps)
   - [ ] Monitor
 
 (And probably a bunch more)

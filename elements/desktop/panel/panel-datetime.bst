@@ -15,12 +15,11 @@ build-depends:
 
 depends:
 - freedesktop-sdk.bst:public-stacks/runtime-minimal.bst
+- deps/libecal.bst
 - freedesktop-sdk.bst:components/gsettings-desktop-schemas.bst
-- gnome-build-meta.bst:core-deps/evolution-data-server.bst
 - freedesktop-sdk.bst:components/glib.bst
 - deps/gtk-4.bst
 - deps/libadwaita.bst
 - desktop/panel/wingpanel.bst
 - deps/granite-6.bst
 - deps/granite-7.bst
-- desktop/panel/wingpanel.bst

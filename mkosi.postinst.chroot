@@ -11,3 +11,8 @@ chmod 4755 /usr/bin/sudo /usr/bin/su /usr/bin/passwd /usr/bin/newuidmap /usr/bin
 
 # Remove empty gnome session
 rm -f /usr/share/wayland-sessions/gnome.desktop
+
+
+# Add repo/objects for flatpaks
+
+mkdir -p /etc/skel/.local/share/flatpak/repo/objects/
