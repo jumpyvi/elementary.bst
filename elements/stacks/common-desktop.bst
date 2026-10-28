@@ -11,6 +11,8 @@ depends:
   - freedesktop-sdk.bst:vm/mesa-default.bst
   - gnome-build-meta.bst:gnomeos-deps/alsa-ucm-conf.bst
   - gnome-build-meta.bst:core-deps/xdg-desktop-portal-gtk.bst
+  - freedesktop-sdk.bst:components/xdg-desktop-portal.bst
+  - freedesktop-sdk.bst:components/xdg-portal-interfaces.bst
   - gnome-build-meta.bst:core/gvfs-daemon.bst
   - gnome-build-meta.bst:sdk/gvfs-client.bst
   - gnome-build-meta.bst:sdk/pinentry.bst

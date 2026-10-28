@@ -20,7 +20,7 @@ depends:
 - freedesktop-sdk.bst:components/curl.bst
 - freedesktop-sdk.bst:components/fontconfig.bst
 - freedesktop-sdk.bst:components/freetype.bst
-- freedesktop-sdk.bst:components/gdk-pixbuf.bst
+- deps/gdk-pixbuf.bst
 - freedesktop-sdk.bst:components/glib-networking.bst
 - freedesktop-sdk.bst:components/glib.bst
 - freedesktop-sdk.bst:components/gobject-introspection.bst
