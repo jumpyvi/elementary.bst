@@ -38,6 +38,7 @@ depends:
   - desktop/settings/settings-network.bst
   - desktop/settings/settings-notifications.bst
   - desktop/settings/settings-display.bst
+  - desktop/settings/settings-bluetooth.bst
 
   # Apps
   - desktop/apps/files.bst
