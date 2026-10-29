@@ -1,4 +1,7 @@
-# ElementaryOS 26.04 (fSDK)
+# Work has ended here, continued at https://github.com/jumpyvi/elementary-build-meta
+
+
+## ElementaryOS 26.04 (fSDK)
 
 ElementaryOS, but based on [Freedesktop SDK](https://gitlab.com/freedesktop-sdk/freedesktop-sdk) instead of Ubuntu.
 
